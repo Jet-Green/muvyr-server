@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const PropertySchema = new Schema({
     title: { type: String },
-    image: { type: String },
+    images: { type: Array },
     // описание: локация, телевизор, холодильник, туалет, 
     descrtiption: { type: String },
     // кол-во мест,
