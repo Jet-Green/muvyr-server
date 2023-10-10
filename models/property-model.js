@@ -10,7 +10,9 @@ const PropertySchema = new Schema({
     // кем забронировано
     bookedBy: { type: Schema.Types.ObjectId, ref: 'User' },
     // конец бронирования, указывается последний день, последняя его секунда
-    endBooking: { type: Number }
+    endBooking: { type: Number },
+    // name - взрослый, детский; amount - цена
+    price: { name: String, amount: Number }
 })
 
 module.exports = model('Property', PropertySchema);
