@@ -6,7 +6,7 @@ const PropertySchema = new Schema({
     // описание: локация, телевизор, холодильник, туалет, 
     description: { type: String },
     // кол-во мест,
-    peopleCount: { type: Number },
+    peopleCount: { type: String },
     // кем забронировано
     bookedBy: { type: Object },
     startBooking: { type: Number },
