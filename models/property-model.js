@@ -9,6 +9,7 @@ const PropertySchema = new Schema({
     peopleCount: { type: Number },
     // кем забронировано
     bookedBy: { type: Schema.Types.ObjectId, ref: 'User' },
+    startBooking: { type: Number },
     // конец бронирования, указывается последний день, последняя его секунда
     endBooking: { type: Number },
     // name - взрослый, детский; amount - цена
