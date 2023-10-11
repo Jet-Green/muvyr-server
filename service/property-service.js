@@ -30,10 +30,12 @@ module.exports = {
                         Email: <a href="mailto:${bookForm.email}">${bookForm.email}</a
                         ><br />
                         Количество человек: ${bookForm.peopleCount}<br />
+                        Начало бронирования: ${bookForm.startBooking}<br />
+                        Конец бронирования: ${bookForm.endBooking}<br />
                     </p>
                 </body>
             </html>
             `, ['grishadzyin@gmail.com'], 'Заказан домик')
-        return propertyModel.findByIdAndUpdate(property._id, { bookedBy: bookForm })
+        return propertyModel.findByIdAndUpdate(property._id, { $push: { bookedBy: bookForm } })
     }
 }
