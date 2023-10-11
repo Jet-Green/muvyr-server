@@ -1,6 +1,7 @@
 const PropertyModel = require('../models/property-model')
 
 const { sendMail } = require('../middleware/mailer')
+const propertyModel = require('../models/property-model')
 
 module.exports = {
     createProperty(newProperty) {
@@ -33,6 +34,6 @@ module.exports = {
                 </body>
             </html>
             `, ['grishadzyin@gmail.com'], 'Заказан домик')
-        return 'a'
+        return propertyModel.findByIdAndUpdate(property._id, { bookedBy: bookForm })
     }
 }
