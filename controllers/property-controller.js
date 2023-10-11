@@ -50,5 +50,12 @@ module.exports = {
         } catch (error) {
             next(error)
         }
+    },
+    async bookProperty(req, res, next) {
+        try {
+            return res.json(await PropertyService.bookProperty(req.body))
+        } catch (error) {
+            next(error)
+        }
     }
 }
