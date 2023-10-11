@@ -14,4 +14,6 @@ router.post('/upload-property-images', MULTER().any(), PropertyController.upload
 
 router.post('/book-property', PropertyController.bookProperty)
 
+router.get('/get-by-id', PropertyController.getById)
+
 module.exports = router
