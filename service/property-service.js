@@ -6,5 +6,8 @@ module.exports = {
     },
     getAllProperty() {
         return PropertyModel.find({})
+    },
+    updatePropertyImagesUrls(_id, filenames) {
+        return PropertyModel.findByIdAndUpdate(_id, { images: filenames })
     }
 }
