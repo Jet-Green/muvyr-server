@@ -7,5 +7,12 @@ module.exports = {
         } catch (error) {
             next(error)
         }
+    },
+    async getAllProperty(req, res, next) {
+        try {
+            return res.json(await PropertyService.getAllProperty())
+        } catch (error) {
+            next(error)
+        }
     }
 }
