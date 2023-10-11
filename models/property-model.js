@@ -12,7 +12,7 @@ const PropertySchema = new Schema({
     startBooking: { type: Number },
     // конец бронирования, указывается последний день, последняя его секунда
     endBooking: { type: Number },
-    price: { type: Number }
+    price: { type: String }
 })
 
 module.exports = model('Property', PropertySchema);
