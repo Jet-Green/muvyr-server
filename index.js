@@ -13,6 +13,8 @@ const history = require('connect-history-api-fallback');
 
 // IMPORT ROUTES
 const userRouter = require('./routers/user-router')
+const propertyRouter = require('./routers/property-router')
+const productRouter = require('./routers/product-router')
 // const posterRouter = require('./routers/poster-router')
 // const eventLocationRouter = require('./routers/event-location-router')
 // const appStateRouter = require('./routers/app-state-router')
@@ -42,6 +44,8 @@ app.use(express.static('dist'))
 
 // ROUTES
 app.use('/auth', userRouter)
+app.use('/property', propertyRouter)
+app.use('/product', productRouter)
 // app.use('/poster', posterRouter)
 // app.use('/event-location', eventLocationRouter)
 // app.use('/app-state', appStateRouter)
