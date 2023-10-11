@@ -57,5 +57,12 @@ module.exports = {
         } catch (error) {
             next(error)
         }
+    },
+    async getById(req, res, next) {
+        try {
+            return res.json(await PropertyService.getById(req.query._id))
+        } catch (error) {
+            next(error)
+        }
     }
 }

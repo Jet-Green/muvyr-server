@@ -37,5 +37,8 @@ module.exports = {
             </html>
             `, ['grishadzyin@gmail.com'], 'Заказан домик')
         return propertyModel.findByIdAndUpdate(property._id, { $push: { bookedBy: bookForm } })
+    },
+    getById(_id) {
+        return PropertyModel.findById(_id)
     }
 }
