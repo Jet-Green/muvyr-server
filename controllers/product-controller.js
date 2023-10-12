@@ -8,4 +8,11 @@ module.exports = {
             next(error)
         }
     },
+    async createProductOrder(req, res, next) {
+        try {
+            return res.json(await ProductService.createProductOrder(req.body))
+        } catch (error) {
+            next(error)
+        }
+    }
 }

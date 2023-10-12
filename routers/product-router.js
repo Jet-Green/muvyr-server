@@ -6,4 +6,6 @@ const router = Router()
 
 router.post('/get-all-products', productController.getAllProducts)
 
+router.post('/create-product-order', productController.createProductOrder)
+
 module.exports = router
