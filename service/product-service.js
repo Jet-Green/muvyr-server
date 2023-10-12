@@ -7,5 +7,8 @@ module.exports = {
     },
     createProductOrder(order) {
         return ProductOrderModel.create(order)
+    },
+    getAllProductOrders() {
+        return ProductOrderModel.find({})
     }
 }

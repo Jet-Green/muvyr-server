@@ -14,5 +14,12 @@ module.exports = {
         } catch (error) {
             next(error)
         }
+    },
+    async getAllProductOrders(req, res, next) {
+        try {
+            return res.json(await ProductService.getAllProductOrders())
+        } catch (error) {
+            next(error)
+        }
     }
 }
